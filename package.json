@@ -1,0 +1,15 @@
+{
+  "name": "@stgdp/ansi-codes",
+  "version": "0.0.1-alpha.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stgdp/ansi-codes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stgdp/ansi-codes/issues"
+  },
+  "homepage": "https://github.com/stgdp/ansi-codes",
+  "author": "",
+  "license": "MIT"
+}

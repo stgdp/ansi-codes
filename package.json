@@ -11,5 +11,11 @@
   },
   "homepage": "https://github.com/stgdp/ansi-codes",
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
 }

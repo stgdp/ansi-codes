@@ -1,13 +1,17 @@
-const escape = require( "./lib/escape" )
-const reset = require( "./lib/reset" )
-const color = require( "./lib/color" )
+const escape   = require( "./lib/escape" )
+const modifier = require( "./lib/modifier" )
+const reset    = require( "./lib/reset" )
+const color    = require( "./lib/color" )
 
 let codes = {
     escape: {
-        ...escape
+        ...escape,
     },
     reset: {
         ...reset,
+    },
+    modifier: {
+        ...modifier,
     },
     ...color,
 }

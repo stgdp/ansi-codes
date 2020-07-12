@@ -3,7 +3,36 @@ const assert = require( "assert" )
 const codes = require( "./" )
 
 describe( "ansi-codes", function() {
-    it( "should be the correct foreground color code", function() {
+    it( "reset codes", function() {
+        assert.equal( codes.reset.all, "\u001b[0m" )
+        assert.equal( codes.reset.bold, "\u001b[22m" )
+        assert.equal( codes.reset.dim, "\u001b[22m" )
+        assert.equal( codes.reset.italic, "\u001b[23m" )
+        assert.equal( codes.reset.underline, "\u001b[24m" )
+        assert.equal( codes.reset.inverse, "\u001b[27m" )
+        assert.equal( codes.reset.hidden, "\u001b[28m" )
+        assert.equal( codes.reset.strike, "\u001b[29m" )
+        assert.equal( codes.reset.fg, "\u001b[39m" )
+        assert.equal( codes.reset.bg, "\u001b[49m" )
+        assert.equal( codes.reset.frame, "\u001b[54m" )
+        assert.equal( codes.reset.encircle, "\u001b[54m" )
+        assert.equal( codes.reset.overline, "\u001b[55m" )
+    } )
+
+    it( "modifier codes", function() {
+        assert.equal( codes.modifier.bold, "\u001b[1m" )
+        assert.equal( codes.modifier.dim, "\u001b[2m" )
+        assert.equal( codes.modifier.italic, "\u001b[3m" )
+        assert.equal( codes.modifier.underline, "\u001b[4m" )
+        assert.equal( codes.modifier.inverse, "\u001b[7m" )
+        assert.equal( codes.modifier.hidden, "\u001b[8m" )
+        assert.equal( codes.modifier.strike, "\u001b[9m" )
+        assert.equal( codes.modifier.frame, "\u001b[51m" )
+        assert.equal( codes.modifier.encircle, "\u001b[52m" )
+        assert.equal( codes.modifier.overline, "\u001b[53m" )
+    } )
+
+    it( "foreground color codes", function() {
         assert.equal( codes.fg.black, "\u001b[30m" )
         assert.equal( codes.fg.red, "\u001b[31m" )
         assert.equal( codes.fg.green, "\u001b[32m" )
@@ -14,7 +43,7 @@ describe( "ansi-codes", function() {
         assert.equal( codes.fg.white, "\u001b[37m" )
     } )
 
-    it( "should be the correct bright foreground color code", function() {
+    it( "bright foreground color codes", function() {
         assert.equal( codes.fg.bright.black, "\u001b[90m" )
         assert.equal( codes.fg.bright.red, "\u001b[91m" )
         assert.equal( codes.fg.bright.green, "\u001b[92m" )
@@ -25,7 +54,7 @@ describe( "ansi-codes", function() {
         assert.equal( codes.fg.bright.white, "\u001b[97m" )
     } )
 
-    it( "should be the correct background color code", function() {
+    it( "background color codes", function() {
         assert.equal( codes.bg.black, "\u001b[40m" )
         assert.equal( codes.bg.red, "\u001b[41m" )
         assert.equal( codes.bg.green, "\u001b[42m" )
@@ -36,7 +65,7 @@ describe( "ansi-codes", function() {
         assert.equal( codes.bg.white, "\u001b[47m" )
     } )
 
-    it( "should be the correct bright background color code", function() {
+    it( "bright background color codes", function() {
         assert.equal( codes.bg.bright.black, "\u001b[100m" )
         assert.equal( codes.bg.bright.red, "\u001b[101m" )
         assert.equal( codes.bg.bright.green, "\u001b[102m" )
@@ -45,11 +74,5 @@ describe( "ansi-codes", function() {
         assert.equal( codes.bg.bright.magenta, "\u001b[105m" )
         assert.equal( codes.bg.bright.cyan, "\u001b[106m" )
         assert.equal( codes.bg.bright.white, "\u001b[107m" )
-    } )
-
-    it( "should be the correct reset code", function() {
-        assert.equal( codes.reset.all, "\u001b[0m" )
-        assert.equal( codes.reset.fg, "\u001b[39m" )
-        assert.equal( codes.reset.bg, "\u001b[49m" )
     } )
 } )

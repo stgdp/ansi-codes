@@ -1,17 +1,15 @@
 # @stgdp/ansi-codes
 
+Get useful ANSI codes for use in your console
+
 [![npm Version](https://img.shields.io/npm/v/@stgdp/ansi-codes?style=flat-square)](https://www.npmjs.com/package/@stgdp/ansi-codes)
 [![Build Status](https://img.shields.io/travis/stgdp/ansi-codes?style=flat-square)](https://travis-ci.org/stgdp/ansi-codes)
 [![License](https://img.shields.io/github/license/stgdp/ansi-codes?style=flat-square)](LICENSE)
 [![Dependency Status](https://img.shields.io/david/stgdp/ansi-codes?style=flat-square)](https://david-dm.org/stgdp/ansi-codes)
 
-## README Coming Soon
+`ansi-codes` is a Node.js module that supplies you with useful ANSI escape codes to format your terminal. Change the text color, background color, make the text bold, italic, underline and more.
 
-<!-- > TODO Opening text -->
-
-<!-- TODO description -->
-
-<!-- ## Installation
+## Installation
 
 ### With npm
 
@@ -23,23 +21,53 @@ npm install @stgdp/ansi-codes
 
 ```
 yarn add @stgdp/ansi-codes
-``` -->
-
-<!-- ## Usage
-
-```javascript
-TODO example here
 ```
 
-**You can also include this into your project using ES6:**
+## Usage
 
 ```javascript
-TODO example here
-``` -->
+const ansiCodes = require( "@stgdp/ansi-codes" )
 
-<!-- ## Reference
+var format = ansiCodes.modifiers.bold + ansiCodes.bg.red + ansiCodes.fg.white
 
-TODO fill in reference -->
+// Produces a bold console log with red background and white text
+console.log( `${format}I'm formatted!${ansiCodes.reset.all} )
+```
+
+## Reference
+
+All codes listed below are available without the escape prefix and suffix within `ansiCodes.codes` for further customisations
+
+### Colors
+
+| Foreground `ansiCodes.fg` | Background `ansiCodes.bg` | Bright Foreground `ansiCodes.fg.bright` | Bright Background `ansiCodes.bg.bright` |
+| ------------------------- | ------------------------- | --------------------------------------- | --------------------------------------- |
+| `black`                   | `black`                   | `black`                                 | `black`                                 |
+| `red`                     | `red`                     | `red`                                   | `red`                                   |
+| `green`                   | `green`                   | `green`                                 | `green`                                 |
+| `yellow`                  | `yellow`                  | `yellow`                                | `yellow`                                |
+| `blue`                    | `blue`                    | `blue`                                  | `blue`                                  |
+| `magenta`                 | `magenta`                 | `magenta`                               | `magenta`                               |
+| `cyan`                    | `cyan`                    | `cyan`                                  | `cyan`                                  |
+| `white`                   | `white`                   | `white`                                 | `white`                                 |
+
+### Misc
+
+| Modifiers `ansiCodes.modifier` | Reset `ansiCodes.reset` | Escapes `ansiCodes.escape` |
+| ------------------------------ | ----------------------- | -------------------------- |
+| `bold`                         | `all`                   | `prefix`                   |
+| `dim`                          | `bold`                  | `suffix`                   |
+| `italic`                       | `dim`                   |                            |
+| `underline`                    | `italic`                |                            |
+| `inverse`                      | `underline`             |                            |
+| `hidden`                       | `inverse`               |                            |
+| `strike`                       | `hidden`                |                            |
+| `frame`                        | `strike`                |                            |
+| `encircle`                     | `fg`                    |                            |
+| `overline`                     | `bg`                    |                            |
+|                                | `frame`                 |                            |
+|                                | `encircle`              |                            |
+|                                | `overline`              |                            |
 
 ## License
 

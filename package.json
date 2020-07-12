@@ -1,6 +1,6 @@
 {
   "name": "@stgdp/ansi-codes",
-  "version": "0.2.0-beta.0",
+  "version": "1.0.0",
   "description": "Get useful ANSI codes for use in your console",
   "license": "MIT",
   "homepage": "https://github.com/stgdp/ansi-codes",

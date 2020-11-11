@@ -3,7 +3,7 @@
 Get useful ANSI codes for use in your console
 
 [![npm Version](https://img.shields.io/npm/v/@stgdp/ansi-codes?style=flat-square)](https://www.npmjs.com/package/@stgdp/ansi-codes)
-[![Build Status](https://img.shields.io/travis/stgdp/ansi-codes?style=flat-square)](https://travis-ci.org/stgdp/ansi-codes)
+[![Build Status](https://img.shields.io/travis/com/stgdp/ansi-codes?style=flat-square)](https://travis-ci.com/stgdp/ansi-codes)
 [![License](https://img.shields.io/github/license/stgdp/ansi-codes?style=flat-square)](LICENSE)
 [![Dependency Status](https://img.shields.io/david/stgdp/ansi-codes?style=flat-square)](https://david-dm.org/stgdp/ansi-codes)
 

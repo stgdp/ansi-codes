@@ -29,6 +29,6 @@
     "terminal"
   ],
   "devDependencies": {
-    "mocha": "^8.0.1"
+    "mocha": "^10.1.0"
   }
 }
